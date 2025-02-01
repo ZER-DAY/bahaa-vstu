@@ -47,7 +47,7 @@ export const Header = () => {
         <div className="container">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className="inline-flex relative before:content-[''] before:opacity-40 before:h-full before:w-full before:bg-[linear-gradient(to_right,#FF00FF,#FF00FF,#FFFFFF,#00FFFF,#00FFFF,#FFFFFF,#00FFFF,#00FFFF,#00FFFF,#FFFFFF,#FFD700,#FFFFFF)] before:absolute before:blur-md">
+            <div className="inline-flex relative before:absolute before:blur-md">
               <Image
                 src={logoAlasel}
                 alt="Footer Logo"
