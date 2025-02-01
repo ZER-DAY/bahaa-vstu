@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { Roboto } from "next/font/google"; // استيراد الخط Roboto
 import "./globals.css";
 import clsx from "clsx";
 import { Header } from "@/sections/Header";
 import Footer from "@/sections/Footer";
 import FooterContent from "@/sections/FooterContent";
-const dmSans = DM_Sans({ subsets: ["latin"] });
+
+// تعريف الخط مع الوزن والمجموعات الفرعية
+const roboto = Roboto({
+  weight: ["400", "700"], // تحديد الأوزان المطلوبة
+  subsets: ["latin", "cyrillic"], // تحديد اللغات المدعومة
+});
 
 export const metadata: Metadata = {
   title: "Light Saas Landing Page",
@@ -19,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="relative">
-      <body className={clsx(dmSans.className, "antialiased bg-[#ffffff]")}>
+      <body className={clsx(roboto.className, "antialiased bg-[#ffffff]")}>
         <Header />
         {children}
       </body>
