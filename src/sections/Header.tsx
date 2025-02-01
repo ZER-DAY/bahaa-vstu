@@ -66,7 +66,7 @@ export const Header = () => {
             <nav className="hidden md:flex gap-6 text-white/60 items-center">
               <Link href="/">Home</Link>
               <Link href="/posts">posts</Link>
-              <Link href="/aboutus">About Us</Link>
+              <Link href="/about-us">About Us</Link>
               <Link href="/contact">Contact Us</Link>
               <div className="mt-3 flex justify-center items-center space-x-4 space-x-reverse">
                 {/* WhatsApp button */}
@@ -92,7 +92,7 @@ export const Header = () => {
                   posts
                 </Link>
                 <Link
-                  href="/aboutus"
+                  href="/about-us"
                   className="block py-2"
                   onClick={closeMenu}
                 >
