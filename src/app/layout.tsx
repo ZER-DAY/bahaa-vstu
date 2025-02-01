@@ -3,6 +3,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
 import { Header } from "@/sections/Header";
+import  Footer  from "@/sections/Footer";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ export default function RootLayout({
         <Header />
         {children}
       </body>
+      <Footer />
     </html>
   );
 }
