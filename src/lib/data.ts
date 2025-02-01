@@ -140,3 +140,30 @@ export const trendingPosts = [
     author: "Esther Howard",
   },
 ];
+
+export const heroSlides = [
+  {
+    id: 1,
+    bgImg: "/post-slide-1.jpg",
+    title: "Волгоградский технический университет ВолгГТУ",
+    brief: ``,
+  },
+  {
+    id: 2,
+    bgImg: "assets/img/post-slide-2.jpg",
+    title: "Поздравление ректора ВолгГТУ с Днем знаний",
+    brief: ``,
+  },
+  {
+    id: 3,
+    bgImg: "assets/img/post-slide-3.jpg",
+    title: "Национальный проект «Наука и университеты»",
+    brief: ``,
+  },
+  {
+    id: 4,
+    bgImg: "assets/img/post-slide-4.jpg",
+    title: "VSTu",
+    brief: ``,
+  },
+];

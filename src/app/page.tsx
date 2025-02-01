@@ -1,6 +1,12 @@
 // src/app/page.tsx
-import PostsList from "@/sections/PostsList";
 
+import PostsList from "@/sections/PostsList";
+import SwiperSection from "@/sections/SwiperSection";
 export default function HomePage() {
-  return <PostsList />;
+  return (
+    <>
+      <SwiperSection />
+      <PostsList />
+    </>
+  );
 }
