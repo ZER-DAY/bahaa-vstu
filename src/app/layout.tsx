@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { Header } from "@/sections/Header";
 import Footer from "@/sections/Footer";
 import FooterContent from "@/sections/FooterContent";
+import { Analytics } from "@vercel/analytics/next";
 
 // تعريف خط Roboto
 const roboto = Roboto({
@@ -40,10 +41,11 @@ export default function RootLayout({
         <div className={merriweather.className}>
           {/* محتوى الصفحة يستخدم خط Merriweather */}
           {children}
+          <Analytics />
+          <FooterContent />
+          <Footer />
         </div>
       </body>
-      <FooterContent />
-      <Footer />
     </html>
   );
 }
