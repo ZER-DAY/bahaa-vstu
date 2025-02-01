@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google"; // استيراد الخط Roboto
+import { Roboto, Merriweather } from "next/font/google"; // استيراد الخطوط
 import "./globals.css";
 import clsx from "clsx";
 import { Header } from "@/sections/Header";
 import Footer from "@/sections/Footer";
 import FooterContent from "@/sections/FooterContent";
 
-// تعريف الخط مع الوزن والمجموعات الفرعية
+// تعريف خط Roboto
 const roboto = Roboto({
   weight: ["400", "700"], // تحديد الأوزان المطلوبة
   subsets: ["latin", "cyrillic"], // تحديد اللغات المدعومة
+});
+
+// تعريف خط Merriweather
+const merriweather = Merriweather({
+  weight: ["400", "700"], // تحديد الأوزان المطلوبة
+  subsets: ["latin"], // تحديد اللغات المدعومة
 });
 
 export const metadata: Metadata = {
@@ -24,9 +30,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="relative">
-      <body className={clsx(roboto.className, "antialiased bg-[#ffffff]")}>
+      <body
+        className={clsx(
+          roboto.className, // استخدام خط Roboto كخط أساسي
+          "antialiased bg-[#ffffff]"
+        )}
+      >
         <Header />
-        {children}
+        <div className={merriweather.className}>
+          {/* محتوى الصفحة يستخدم خط Merriweather */}
+          {children}
+        </div>
       </body>
       <FooterContent />
       <Footer />
