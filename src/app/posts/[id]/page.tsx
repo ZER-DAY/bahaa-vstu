@@ -7,8 +7,10 @@ type Props = {
 };
 
 export default function PostPage({ params }: Props) {
+  // البحث عن البوست بناءً على ID
   const post = posts.find((p) => p.id === params.id);
 
+  // في حال لم يتم العثور على البوست، نعرض صفحة 404
   if (!post) return notFound();
 
   return (
@@ -26,9 +28,20 @@ export default function PostPage({ params }: Props) {
           {post.title}
         </h1>
 
+        {/* صورة الغلاف */}
+        <figure className="my-8">
+          <Image
+            src={post.image}
+            alt="Post Illustration"
+            width={1200}
+            height={800}
+            className="w-full h-auto rounded-md shadow-md"
+          />
+        </figure>
+
         {/* المحتوى */}
         <article className="text-gray-700 text-lg leading-relaxed space-y-6">
-          {/* أول فقرة مع الحرف الأول */}
+          {/* أول فقرة مع الحرف الأول كبير */}
           <p>
             <span className="firstcharacter text-6xl font-bold text-blue-600 float-left mr-4">
               {post.content.charAt(0)}
@@ -36,18 +49,7 @@ export default function PostPage({ params }: Props) {
             {post.content.slice(1, 200)}
           </p>
 
-          {/* الصورة بعد الفقرة الأولى */}
-          <figure className="my-8">
-            <Image
-              src={post.image}
-              alt="Post Illustration"
-              width={1200}
-              height={800}
-              className="w-full h-auto rounded-md shadow-md"
-            />
-          </figure>
-
-          {/* بقية الفقرات */}
+          {/* باقي المحتوى مقسم إلى فقرات */}
           {post.content
             .split(". ")
             .slice(1)
@@ -57,6 +59,23 @@ export default function PostPage({ params }: Props) {
               </p>
             ))}
         </article>
+
+        {/* بيانات الكاتب */}
+        <div className="mt-10 flex items-center gap-4 p-4 bg-gray-100 rounded-md shadow">
+          <Image
+            src={post.author.avatar}
+            alt={post.author.name}
+            width={60}
+            height={60}
+            className="rounded-full"
+          />
+          <div>
+            <h3 className="text-lg font-bold text-gray-800">
+              {post.author.name}
+            </h3>
+            <p className="text-gray-600 text-sm">Автор публикации</p>
+          </div>
+        </div>
       </div>
     </section>
   );
