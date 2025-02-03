@@ -9,20 +9,20 @@ const swiperData = [
   {
     id: 1,
     image: "/post-slide-1.jpg",
-    title: "15 Work From Home Part-Time Jobs You Can Do Now",
-    description: "Explore flexible job opportunities that fit your schedule.",
+    title: "Волгоградский государственный технический университет",
+    description: "",
   },
   {
     id: 2,
     image: "/post-slide-4.jpg",
-    title: "Let's Get Back to Work, Brisbane",
-    description: "Discover how Brisbane is opening up for workers.",
+    title: "",
+    description: "",
   },
   {
     id: 3,
     image: "/post-slide-2.jpg",
-    title: "5 Great Startup Tips for Female Founders",
-    description: "Learn essential tips to kickstart your business journey.",
+    title: "",
+    description: "",
   },
 ];
 

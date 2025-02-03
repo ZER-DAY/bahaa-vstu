@@ -17,11 +17,11 @@ export default function PostPage({ params }: Props) {
     <section className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-md mt-14 mb-14">
       <div className="post-content">
         {/* الفئة والتاريخ */}
-        <div className="post-meta flex items-center text-gray-600 text-sm mb-4 font-medium">
+        {/* <div className="post-meta flex items-center text-gray-600 text-sm mb-4 font-medium">
           <span className="font-semibold text-blue-600">{post.category}</span>
           <span className="mx-2 text-gray-400">•</span>
           <span>{post.date}</span>
-        </div>
+        </div> */}
 
         {/* العنوان */}
         <h1 className="text-5xl font-extrabold mb-6 leading-snug text-gray-800">
@@ -61,7 +61,7 @@ export default function PostPage({ params }: Props) {
         </article>
 
         {/* بيانات الكاتب */}
-        <div className="mt-10 flex items-center gap-4 p-4 bg-gray-100 rounded-md shadow">
+        {/* <div className="mt-10 flex items-center gap-4 p-4 bg-gray-100 rounded-md shadow">
           <Image
             src={post.author.avatar}
             alt={post.author.name}
@@ -75,7 +75,7 @@ export default function PostPage({ params }: Props) {
             </h3>
             <p className="text-gray-600 text-sm">Автор публикации</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

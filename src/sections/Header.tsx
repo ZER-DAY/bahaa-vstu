@@ -25,8 +25,7 @@ export const Header = () => {
       {/* Top part of the header */}
       <div className="flex justify-center items-center py-2 bg-[#1A1A1A] text-white text-sm gap-2">
         <p className="text-white/80 hidden md:block">
-          Embark on a bright future with Al-Aseel Agency, where we build
-          together your first steps towards success and development.
+          Присоединяйтесь к нашей группе для иностранных студентов в Telegram
         </p>
         <Link href="join-our-agency">
           <motion.div
@@ -34,7 +33,7 @@ export const Header = () => {
             onHoverStart={() => arrowControls.start({ x: 5 })}
             onHoverEnd={() => arrowControls.start({ x: 0 })}
           >
-            <p>Start Now</p>
+            <p>присоединяйся</p>
             <motion.div animate={arrowControls} transition={{ duration: 0.2 }}>
               <ArrowRight className="h-4 w-4 inline-flex justify-center items-center" />
             </motion.div>
@@ -64,10 +63,10 @@ export const Header = () => {
 
             {/* Navigation menu (for larger devices) */}
             <nav className="hidden md:flex gap-6 text-white/60 items-center">
-              <Link href="/">Home</Link>
-              <Link href="/posts">posts</Link>
-              <Link href="/about-us">About Us</Link>
-              <Link href="/contact">Contact Us</Link>
+              <Link href="/">Главная </Link>
+              <Link href="/posts">посты</Link>
+              <Link href="/about-us">о нас</Link>
+              <Link href="/contact">связаться с нами</Link>
               <div className="mt-3 flex justify-center items-center space-x-4 space-x-reverse">
                 {/* WhatsApp button */}
                 <a
@@ -86,17 +85,17 @@ export const Header = () => {
             {isMenuOpen && (
               <nav className="md:hidden absolute top-24 right-0 bg-[#1A1A1A] w-full text-white/60 p-4">
                 <Link href="/" className="block py-2" onClick={closeMenu}>
-                  Home
+                  Главная
                 </Link>
                 <Link href="/posts" className="block py-2" onClick={closeMenu}>
-                  posts
+                  посты
                 </Link>
                 <Link
                   href="/about-us"
                   className="block py-2"
                   onClick={closeMenu}
                 >
-                  About Us
+                  о нас
                 </Link>
 
                 <Link
@@ -104,11 +103,20 @@ export const Header = () => {
                   className="block py-2"
                   onClick={closeMenu}
                 >
-                  Contact Us
+                  связаться с нами
                 </Link>
-                <button className="bg-white text-black px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight mt-2">
-                  Start With Us
-                </button>
+                <div className="mt-3 flex justify-center items-center space-x-4 space-x-reverse">
+                  {/* WhatsApp button */}
+                  <a
+                    href="https://wa.me/+96879445665"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center bg-green-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600 transition"
+                  >
+                    <FaWhatsapp className="w-6 h-6 mr-2" />
+                    Contact Us
+                  </a>
+                </div>
               </nav>
             )}
           </div>

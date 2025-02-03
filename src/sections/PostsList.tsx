@@ -19,20 +19,13 @@ export default function PostsList() {
                 className="w-full h-auto rounded cursor-pointer"
               />
             </Link>
-            <div className="post-meta mt-3">
-              <span className="text-sm font-bold text-gray-500">
-                {posts[0].category}
-              </span>
-              <span className="mx-1 text-gray-500">•</span>
-              <span className="text-sm text-gray-500">{posts[0].date}</span>
-            </div>
             <h2 className="text-2xl font-semibold mt-2">
               <Link href={`/posts/${posts[0].id}`} className="hover:underline">
                 {posts[0].title}
               </Link>
             </h2>
             <p className="text-gray-600 mt-2">{posts[0].excerpt}</p>
-            <div className="flex items-center mt-4">
+            {/* <div className="flex items-center mt-4">
               <Image
                 src={posts[0].author.avatar}
                 alt={posts[0].author.name}
@@ -45,7 +38,7 @@ export default function PostsList() {
                   {posts[0].author.name}
                 </h3>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -62,13 +55,7 @@ export default function PostsList() {
                   className="w-[250px] h-[159px] object-cover rounded block mx-auto cursor-pointer"
                 />
               </Link>
-              <div className="post-meta mt-3">
-                <span className="text-sm font-bold text-gray-500">
-                  {post.category}
-                </span>
-                <span className="mx-1 text-gray-500">•</span>
-                <span className="text-sm text-gray-500">{post.date}</span>
-              </div>
+
               <h2 className="text-lg font-semibold mt-2">
                 <Link href={`/posts/${post.id}`} className="hover:underline">
                   {post.title}

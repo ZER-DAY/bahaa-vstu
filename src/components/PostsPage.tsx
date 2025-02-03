@@ -30,12 +30,10 @@ export default function PostsPage() {
                 {post.excerpt}
               </p>
               <div className="text-sm text-gray-700 mb-2">
-                <strong>Категория:</strong> {post.category}
+
               </div>
-              <div className="text-sm text-gray-700 mb-2">
-                <strong>Дата публикации:</strong> {post.date}
-              </div>
-              <div className="flex items-center gap-3 mt-4">
+
+              {/* <div className="flex items-center gap-3 mt-4">
                 <Image
                   src={post.author.avatar}
                   alt={post.author.name}
@@ -44,7 +42,7 @@ export default function PostsPage() {
                   className="rounded-full"
                 />
                 <p className="text-gray-700">{post.author.name}</p>
-              </div>
+              </div> */}
             </div>
           </Link>
         ))}
